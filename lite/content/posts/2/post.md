@@ -1,10 +1,6 @@
-title:My First Post
-author:Timothy Clark
+title:How to make Polyjuice Potion
+author:Hermione Grainger
 date:2018-08-03
 time:20:36:48
 #############################################################################################################################################################################################
-Some content
-Line2
-l3
-blah
-## Header
+Just kidding, go to Potions Class!
