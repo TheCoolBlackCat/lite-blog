@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+.post {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0 auto;
+  padding: 15px;
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+  -moz-box-shadow: 2px 2px 2px #ccc;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #ccc;
+  max-width: 500px;
+}
+.post .title {
+  color: red;
+}
+.post .author {
+  color: green;
+}
+.post .date {
+  color: blue;
+}
+
+footer {
+  text-align: center;
+}
