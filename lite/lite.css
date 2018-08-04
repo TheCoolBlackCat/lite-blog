@@ -119,7 +119,7 @@ button:hover {
   font-size: 2em;
 }
 
-#newPost, #editPost input {
+#newPost input, #editPost input {
   background: white;
   width: 100%;
   display: block;
@@ -127,7 +127,7 @@ button:hover {
   border-radius: 3px;
 }
 
-#newPost, #editPost textarea {
+#newPost textarea, #editPost textarea {
   width: 100%;
   height: 150px;
   background: white;
@@ -136,7 +136,7 @@ button:hover {
   resize: vertical;
 }
 
-#newPost, #editPost button {
+#newPost button, #editPost button {
   margin-top: 5px;
   font-size: 1em;
 }

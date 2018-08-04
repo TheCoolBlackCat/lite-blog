@@ -1,5 +1,30 @@
 <?php
 
+// function checkBlank ($id, $title, $author, $body, $datetime) {
+//   $invalid = false;
+//   if(!isset($id)) {
+//     echo "ID not specified";
+//     $invalid = true;
+//   }
+//   if(!isset($title)) {
+//     echo "Title cannot be blank";
+//     $invalid = true;
+//   }
+//   if(!isset($author)) {
+//     echo "Author cannot be blank";
+//     $invalid = true;
+//   }
+//   if(!isset($body)) {
+//     echo "Body cannot be blank";
+//     $invalid = true;
+//   }
+//   if(!isset($datetime)) {
+//     echo "Date/Time invalid";
+//     $invalid = true;
+//   }
+//   return $invalid;
+// }
+
 function validPost($id) {
   $path = "lite/content/posts/". $id ."/post.md";
   return file_exists($path);
@@ -55,22 +80,22 @@ function newPost ($title, $author, $body) {
   $date = date("d-m-Y");
   $time = date("h_i_s");
   
-  if (!file_exists($path)) {
-    mkdir($path."/comments", 0775, true);
-  } else {
-    echo "Directory Create Error";
-  }
-  
-  $f = fopen($path . "/post.md", "w") or die("Unable to create file!");
-  $txt = "id:$id
+    if (!file_exists($path)) {
+      mkdir($path."/comments", 0775, true);
+      
+$f = fopen($path . "/post.md", "w") or die("Unable to create file!");
+$txt = "id:$id
 title:$title
 author:$author
 date:$date
 time:$time
 #############################################################################################################################################################################################
 $body";
-  fwrite($f, $txt);
-  fclose($f);
+fwrite($f, $txt);
+fclose($f);
+} else {
+  echo "Directory Create Error";
+}
 }
 
 function editPost ($id, $title, $author, $body, $datetime) {

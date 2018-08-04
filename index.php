@@ -40,7 +40,7 @@ switch ($path[0]) {
       // echo $path[1]. $title . $author . $body;
       echo "Edited Post";
       editPost($path[1], $title, $author, $body, $datetime);
-      header("Location: /");
+      header("Location: ../post/$path[1]");
     } else {
       include("lite/editPost.php");
     }
@@ -66,8 +66,8 @@ switch ($path[0]) {
     echo "<h1>404</h1>";
     echo $uri[0];
     echo '<a href="/">Back Home</a>';
-    //header("Location: /");
-    die();
+    // header("Location: /");
+    // die();
     break;
 }
 include("lite/partials/footer.php");

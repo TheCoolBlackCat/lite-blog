@@ -4,7 +4,7 @@ function printSimpleHome () {
   $files = getFiles("lite/content/posts");
   echo "<ul>";
   echo '<li><a href="/">Home</a></li>';
-  foreach ($files as $k => $file) {
+  foreach ($files as $file) {
     echo "<li><a href=\"post/$file\">Post $file</a></li>";
   }
   echo "</ul>";
@@ -16,8 +16,8 @@ function printHead () {
 }
 function printIndex () {
   $files = getFiles("lite/content/posts");
-  krsort($files); // Reverse array
-  foreach ($files as $k => $file) {
+  arsort($files); // Reverse array, sort values
+  foreach ($files as $file) {
     $post = getPostById($file);
     $meta = $post[0];
     $body = $post[1];

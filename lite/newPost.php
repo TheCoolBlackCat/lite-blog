@@ -14,5 +14,5 @@
     </div>
     <button type="submit">Post!</button>
   </form>
-  <a href="/">Back Home</a>
+  <a href="/">Back</a>
 </div>
