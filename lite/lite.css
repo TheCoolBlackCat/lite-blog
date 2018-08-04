@@ -7,24 +7,28 @@ html, body {
   background-color: #eee;
 }
 
-.post {
-  font-family: 'Titillium Web', sans-serif;
-  margin: 0 auto;
-  padding: 15px;
-  -webkit-box-shadow: 2px 2px 2px #ccc;
-  -moz-box-shadow: 2px 2px 2px #ccc;
-  background-color: #fff;
-  box-shadow: 2px 2px 2px #ccc;
-  max-width: 500px;
+body {
+  display: none;
 }
-.post .title {
-  color: red;
+
+a {
+  text-decoration: none;
+  outline: none;
 }
-.post .author {
-  color: green;
+
+button {
+  border: 1px solid skyblue;
+  background-color: white;
+  color: skyblue;
+  transition-duration: 1s;
+  border-radius: 3px;
+  cursor: pointer;
 }
-.post .date {
-  color: blue;
+
+button:hover {
+  background-color: skyblue;
+  border-color: skyblue;
+  color: white;
 }
 
 .preview {
@@ -38,15 +42,106 @@ html, body {
   max-width: 500px;
 }
 .preview .title {
-  color: red;
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+  color: grey;
+  transition-duration: 1.5s;
+}
+.preview .title:hover {
+  color: skyblue;
+}
+
+.preview .meta {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 .preview .author {
-  color: green;
+  
 }
 .preview .date {
-  color: blue;
+  
+}
+.preview button {
+  
+}
+
+.post {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 10px auto;
+  padding: 15px;
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+  -moz-box-shadow: 2px 2px 2px #ccc;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #ccc;
+  max-width: 500px;
+}
+.post .title {
+  margin-bottom: 1px;
+  padding-bottom: 1px;
+}
+
+.post .meta {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 3px;
+  padding-bottom: 3px;
+}
+.post .author {
+  text-decoration: bold;
+}
+.post .date {
+  text-decoration: italic;
+}
+.post .nav {
+  color: grey;
+  transition-duration: 1s;
+}
+.post .nav:hover {
+  color: darkgrey;
+}
+
+#newPost {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 10px auto;
+  padding: 15px;
+  -webkit-box-shadow: 2px 2px 2px #ccc;
+  -moz-box-shadow: 2px 2px 2px #ccc;
+  background-color: #fff;
+  box-shadow: 2px 2px 2px #ccc;
+  max-width: 500px;
+}
+
+#postButton button {
+  position: absolute;
+  padding: 3px;
+  font-size: 2em;
+}
+
+#newPost input {
+  background: white;
+  width: 100%;
+  display: block;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+}
+
+#newPost textarea {
+  width: 100%;
+  height: 150px;
+  background: white;
+  border: 1px solid skyblue;
+  border-radius: 3px;
+  resize: vertical;
+}
+
+#newPost button {
+  margin-top: 5px;
+  font-size: 1em;
 }
 
 footer {
   text-align: center;
+  margin-top: 5px;
 }

@@ -32,26 +32,38 @@ function getPostById ($id) {
 function displayPostBasic ($post) {
   $meta = $post[0];
   $body = $post[1];
-  echo '<div class="post">';
-  echo "<h2 class=\"title\">$meta[title]</h2>";
-  echo "<span class=\"author\">$meta[author] </span>";
-  echo "<span class=\"date\">$meta[date]</span>";
-  echo '<div class="body">';
-  for ($line = 0; $line < count($body); $line++)
-    echo "<p>".$body[$line]."</p>";
-  echo '</div>';
-//   echo '<form action="post" method="GET">
-//           <input name="id" value="1" style="display:none;"/>
-//           <input name="action" value="comment" style="display:none;"/>
-//           <textarea name="data"></textarea>
-//           <button type="submit">Submit</button>
-//         </form';
-  echo "<a href=\"/\">Back</a>";
-  echo "</div>";
+  $meta["time"] = str_replace("_",":", $meta["time"]);
   
+  include("lite/showPost.php");
 }
 
 function displayComments($post) {
   
+}
+
+function newPost ($title, $author, $body) {
+  // Get IDs, then add 1 to get new ID
+  $files = getFiles("lite/content/posts");
+  $id = max($files) + 1;
+  $path = "lite/content/posts/$id";
+  $date = date("d-m-Y");
+  $time = date("h_i_s");
+  
+  if (!file_exists($path)) {
+    mkdir($path."/comments", 0775, true);
+  } else {
+    echo "Directory Create Error";
+  }
+  
+  $f = fopen($path . "/post.md", "w") or die("Unable to create file!");
+  $txt = "id:$id
+title:$title
+author:$author
+date:$date
+time:$time
+#############################################################################################################################################################################################
+$body";
+  fwrite($f, $txt);
+  fclose($f);
 }
 ?>

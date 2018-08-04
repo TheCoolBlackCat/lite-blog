@@ -1,5 +1,8 @@
+  <script type="text/javascript">
+    document.body.style.display = "block";
+  </script>
   </body>
   <footer>
-    <?php echo "Copyright " . getdate()["year"]; ?>
+    <?php echo "© " . getdate()["year"]; ?>
   </footer>
 </html>

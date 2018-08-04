@@ -2,7 +2,7 @@ id:3
 title:A Long Post
 author:Timothy Clark
 date:2018-08-04
-time:12:51:45
+time:12_51_45
 #############################################################################################################################################################################################
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tristique, libero ut auctor mollis, risus lacus porttitor enim, vel dapibus nulla purus ac neque. Aenean semper ut metus vitae molestie. Maecenas condimentum elit et lacinia bibendum. Etiam sit amet fermentum lorem, ac dignissim enim. Integer eu lacinia mauris, et luctus lectus. Proin sed velit et dolor rhoncus tincidunt. Aenean sagittis nisi erat, quis ornare purus dapibus at. Curabitur dictum nulla justo, id ullamcorper metus mollis id. Integer odio dui, placerat in lorem a, ullamcorper varius libero. Nullam commodo, sapien ac ultricies luctus, tortor nibh fringilla sapien, eu vehicula mauris libero nec mauris.
 Etiam efficitur diam ac nisi aliquam, sit amet rhoncus leo interdum. Donec consectetur porttitor ultrices. Aliquam ac sem dapibus, pellentesque justo vitae, imperdiet lectus. In dolor ligula, mattis ut ultricies non, rhoncus interdum risus. Pellentesque vel nisi ut elit dictum sodales ac quis libero. Maecenas commodo nunc sit amet lectus iaculis ornare. Etiam nec nisl at nisl consectetur faucibus eu eu magna.
