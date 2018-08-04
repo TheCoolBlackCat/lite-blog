@@ -1,4 +1,10 @@
 <?php
+
+function validPost($id) {
+  $path = "lite/content/posts/". $id ."/post.md";
+  return file_exists($path);
+}
+
 // Returns a Post in an array by its specified ID
 function getPostById ($id) {
   $path = "lite/content/posts/". $id ."/post.md";
@@ -65,5 +71,39 @@ time:$time
 $body";
   fwrite($f, $txt);
   fclose($f);
+}
+
+function editPost ($id, $title, $author, $body, $datetime) {
+  $path = "lite/content/posts/$id/post.md";
+  echo $path;
+  //$date = date("d-m-Y");
+  //$time = date("h_i_s");
+  
+  if (file_exists($path)) {
+    $f = fopen($path, "w") or die("Unable to open file!");
+    $txt = "id:$id
+title:$title
+author:$author
+date:$datetime[0]
+time:$datetime[1]
+#############################################################################################################################################################################################
+$body";
+    fwrite($f, $txt);
+    fclose($f);
+  } else {
+    echo "File Not Found!";
+  }
+}
+
+function recursiveDelete($dir) {
+  $files = array_diff(scandir($dir), array('.','..'));
+  foreach ($files as $file) // If directory, recurse, else delete file
+    (is_dir("$dir/$file")) ? recursiveDelete("$dir/$file") : unlink("$dir/$file");
+  return rmdir($dir);
+}
+
+function deletePostById($id) {
+  $path = "lite/content/posts/$id";
+  echo recursiveDelete($path); 
 }
 ?>

@@ -102,7 +102,7 @@ button:hover {
   color: darkgrey;
 }
 
-#newPost {
+#newPost, #editPost {
   font-family: 'Titillium Web', sans-serif;
   margin: 10px auto;
   padding: 15px;
@@ -119,7 +119,7 @@ button:hover {
   font-size: 2em;
 }
 
-#newPost input {
+#newPost, #editPost input {
   background: white;
   width: 100%;
   display: block;
@@ -127,7 +127,7 @@ button:hover {
   border-radius: 3px;
 }
 
-#newPost textarea {
+#newPost, #editPost textarea {
   width: 100%;
   height: 150px;
   background: white;
@@ -136,9 +136,33 @@ button:hover {
   resize: vertical;
 }
 
-#newPost button {
+#newPost, #editPost button {
   margin-top: 5px;
   font-size: 1em;
+}
+
+.buttons #edit button {
+  border: 1px solid orange;
+  background-color: white;
+  color: orange;
+}
+
+.buttons #edit button:hover {
+  background-color: orange;
+  border-color: orange;
+  color: white;
+}
+
+.buttons #delete button {
+  border: 1px solid red;
+  background-color: white;
+  color: red;
+}
+
+.buttons #delete button:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
 }
 
 footer {

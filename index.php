@@ -23,6 +23,28 @@ switch ($path[0]) {
   case "new":
     include("lite/newPost.php");
     break;
+  case "delete":
+    if (validPost($path[1])) {
+      deletePostById($path[1]);
+      echo "Deleted Post";
+    }
+    header("Location: /");
+    break;
+  case "edit":
+    if ($_SERVER['REQUEST_METHOD'] === "POST" && validPost($path[1])) {
+      $title = htmlspecialchars($_POST["title"]);
+      $author = htmlspecialchars($_POST["author"]);
+      $body = htmlspecialchars($_POST["body"]);
+      $datetime = array(htmlspecialchars($_POST["date"]), htmlspecialchars($_POST["time"]));
+      // print_r($datetime[0]);
+      // echo $path[1]. $title . $author . $body;
+      echo "Edited Post";
+      editPost($path[1], $title, $author, $body, $datetime);
+      header("Location: /");
+    } else {
+      include("lite/editPost.php");
+    }
+    break;
   case "create":
     if ($_SERVER['REQUEST_METHOD'] === "POST") {
       $title = htmlspecialchars($_POST["title"]);
@@ -31,10 +53,8 @@ switch ($path[0]) {
       
       echo "Creating Post";
       newPost($title, $author, $body);
-      header("Location: /");
-    } else {
-      header("Location: /");
     }
+    header("Location: /");
     break;
   case "posts":
   case "index":
