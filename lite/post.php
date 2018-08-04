@@ -40,8 +40,15 @@ function displayPostBasic ($post) {
   for ($line = 0; $line < count($body); $line++)
     echo "<p>".$body[$line]."</p>";
   echo '</div>';
-  echo "</div>";
+//   echo '<form action="post" method="GET">
+//           <input name="id" value="1" style="display:none;"/>
+//           <input name="action" value="comment" style="display:none;"/>
+//           <textarea name="data"></textarea>
+//           <button type="submit">Submit</button>
+//         </form';
   echo "<a href=\"/\">Back</a>";
+  echo "</div>";
+  
 }
 
 function displayComments($post) {

@@ -1,7 +1,6 @@
 <?php
 require("lite/lite.php");
 require("lite/post.php");
-
 include("lite/partials/header.php");
 
 // Routing
@@ -18,8 +17,10 @@ switch ($uri[0]) {
     // print_r($my_post);
     displayPostBasic($my_post);
     break;
+  case "posts":
+  case "index":
   case "":
-    printHome();
+    printIndex();
     break;
   default:
     echo "<h1>404</h1>";
