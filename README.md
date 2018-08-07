@@ -6,7 +6,7 @@ Try a live demo [here](https://lite-blog.timothyclark.co.uk)
 Note: This demo may be updated before releases (and sometimes even this repo)
 
 ## Install
-[Stable-ish](https://github.com/TheCoolBlackCat/lite-blog/releases)
+[Stable-ish](https://github.com/TheCoolBlackCat/lite-blog/releases) | 
 [Bleeding Edge](https://github.com/TheCoolBlackCat/lite-blog.git)
 
 1. Unzip in web server directory
