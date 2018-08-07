@@ -11,6 +11,13 @@
 //   // echo '<h1>Lite Blog</h1><ul><li><a href="/">Home</a></li><li><a href="post?id=1">Post 1</a></li><li><a href="post?id=2">Post 2</a></li><li><a href="post?id=3">Post 3</a></li></ul>';
 // }
 
+function recursiveDelete($dir) {
+  $files = array_diff(scandir($dir), array('.','..'));
+  foreach ($files as $file) // If directory, recurse, else delete file
+    (is_dir("$dir/$file")) ? recursiveDelete("$dir/$file") : unlink("$dir/$file");
+  return rmdir($dir);
+}
+
 function printHead () {
   echo "<h1>Lite Blog</h1>";
 }

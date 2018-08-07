@@ -127,13 +127,6 @@ $body";
   }
 }
 
-function recursiveDelete($dir) {
-  $files = array_diff(scandir($dir), array('.','..'));
-  foreach ($files as $file) // If directory, recurse, else delete file
-    (is_dir("$dir/$file")) ? recursiveDelete("$dir/$file") : unlink("$dir/$file");
-  return rmdir($dir);
-}
-
 function deletePostById($id) {
   $path = "lite/content/posts/$id";
   echo recursiveDelete($path); 
