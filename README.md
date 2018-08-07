@@ -2,6 +2,7 @@
 
 ## Demo
 Try a live demo [here](https://lite-blog.timothyclark.co.uk)
+
 Note: This demo may be updated before releases (and sometimes even this repo)
 
 ## Install
