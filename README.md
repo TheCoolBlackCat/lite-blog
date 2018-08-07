@@ -1,5 +1,8 @@
 # Lite Blog
 
+## Demo
+Try a live demo [here](https://lite-blog.timothyclark.co.uk)
+
 ## Install
 * Unzip in web server directory
 * Configure server (NGINX file provided)
