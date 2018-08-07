@@ -1,6 +1,9 @@
 <?php
 require("lite/lite.php");
+require("lite/random.php");
 require("lite/post.php");
+
+include("seed.php");
 include("lite/partials/header.php");
 
 // Routing

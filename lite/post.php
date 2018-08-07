@@ -30,6 +30,10 @@ function validPost($id) {
   return file_exists($path);
 }
 
+function checkIdUnused ($id) {
+  return !validPost($id);
+}
+
 // Returns a Post in an array by its specified ID
 function getPostById ($id) {
   $path = "lite/content/posts/". $id ."/post.md";
@@ -75,7 +79,10 @@ function displayComments($post) {
 function newPost ($title, $author, $body) {
   // Get IDs, then add 1 to get new ID
   $files = getFiles("lite/content/posts");
-  $id = max($files) + 1;
+  $hex = time() . "-" . randomHex(32);
+  if (checkIdUnused($hex))
+    $id = $hex;
+  //$id = max($files) + 1;
   $path = "lite/content/posts/$id";
   $date = date("d-m-Y");
   $time = date("h_i_s");
