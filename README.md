@@ -6,12 +6,12 @@ Try a live demo [here](https://lite-blog.timothyclark.co.uk)
 Note: This demo may be updated before releases (and sometimes even this repo)
 
 ## Install
-1. [Stable-ish](https://github.com/TheCoolBlackCat/lite-blog/releases)
-2. [Bleeding Edge](https://github.com/TheCoolBlackCat/lite-blog.git)
+[Stable-ish](https://github.com/TheCoolBlackCat/lite-blog/releases)
+[Bleeding Edge](https://github.com/TheCoolBlackCat/lite-blog.git)
 
-* Unzip in web server directory
-* Configure server (NGINX file provided)
-* Navigate to server, you'll see the homepage!
+1. Unzip in web server directory
+2. Configure server (NGINX file provided)
+3. Navigate to server, you'll see the homepage!
 
 ## Permissions
 Ensure permissions are set
