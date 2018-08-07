@@ -43,6 +43,7 @@ function printIndex () {
           $bodyText .= $body[$line];
           echo substr($bodyText, 0, 100)."...";
         echo '</div>';
+        echo "<div class=\"goTo\"><a href=\"post/$file\"><button class=\"invert\">Read More</button></a></div>";
     echo"</div>";
   }
   // echo '<h1>Lite Blog</h1><ul><li><a href="/">Home</a></li><li><a href="post?id=1">Post 1</a></li><li><a href="post?id=2">Post 2</a></li><li><a href="post?id=3">Post 3</a></li></ul>';

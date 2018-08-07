@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600');
 
+@media only screen and (min-width: 825px) {
+    #postButton {
+        position: absolute;
+    }
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -29,6 +35,16 @@ button:hover {
   background-color: skyblue;
   border-color: skyblue;
   color: white;
+}
+
+button.invert {
+  background-color: skyblue;
+  color: white;
+}
+
+button.invert:hover {
+  background-color: white;
+  color: skyblue;
 }
 
 .preview {
@@ -114,7 +130,6 @@ button:hover {
 }
 
 #postButton button {
-  position: absolute;
   padding: 3px;
   font-size: 2em;
 }
